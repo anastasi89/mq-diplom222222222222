@@ -87,23 +87,191 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
+.feedback {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+ }
+ .popup {
+     display: flex;
+     position: fixed;
+     align-items: center;
+     justify-content: center;
+     background-color: rgba(0, 0, 0, 0.7);
+     top: 0;
+     right: 0;
+     left: 0;
+     bottom: 0;
+     z-index: 2;
+ }
+ .popup-container {
+     background-color: white;
+     width: 390px;
+     height: 589px;
+     padding: 50px 40px;
+     position: relative;
+     margin-top: 230px;
+ }
+ .question-feedback {
+    font-size: 13px;
+ }
+ .select-answer {
+     margin-top: 12px;
+     padding-left: 18px;
+     margin-bottom: 30px;
+     width: 100%;
+     height: 48px;
+     background: url(../svg/form-arrows.svg);
+     background-repeat: no-repeat;
+     background-position: right 12px center;
+     background-size: 10px 17px;
+     background-color: #f4f7f6;
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     color: grey;
+ }
+ .radios {
+     display: inline-block;
+     margin-top: 10px;
+     margin-bottom: 30px;
+ }
+ .radio {
+      position: absolute;
+      clip: rect(1px, 1px, 1px, 1px);
+      height: 1px;
+      width: 1px;
+  }
+.radio-text {
+    font-size: 13px;
+}
+.radio-text::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+    background: url(../svg/form-empty-circle.svg) no-repeat center center;
+    background-size: 100%;
+ }
+ .radio:checked ~ .radio-text::before {
+     background-image: url(../svg/form-circle.svg);
+ }
+ .text-form {
+     width: 330px;
+     background-color: #f4f7f6;
+     font-family: open-sans;
+     font-size: 13px;
+     color: grey;
+     margin-top: 12px;
+     margin-bottom: 22px;
+     margin-right: 30px;
+ }
+ .send-button {
+    width: 330px;
+    height: 50px;
+    background-color: #b59f5b;
+    font-family: open-sans-bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-right: 30px;
+ }
+ .send-button a {
+    color: white;
+ }
+ .popup-close {
+     position: absolute;
+     top: -30px;
+     right: -8px;
+     width: 18px;
+     height: 18px;
+ }
 .main-content,
 .posts,
 .hashtag,
 .meta,
 .new-post,
-.tag-list {
+.tag-list,
+.articles-trend, .trend, .shop-price, .price-product {
   display: flex;
 }
 main {
   width: 778px;
+}
+.articles-trend {
+    min-height: 320px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.trends {
+  margin-top: 59px;
+}
+.hashtag a:hover {
+  text-decoration: underline;
+}
+.trend {
+  padding-left: 4px;
+  width: calc(25% - 4px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: flex-end;
+  position: relative;
+  z-index: 0;
+}
+.trend-first {
+    background-image: url(../img/trend1.jpg);
+}
+.trend-second {
+    background-image: url(../img/trend2.jpg);
+}
+.trend-third {
+    background-image: url(../img/trend3.jpg);
+}
+.trend-fourth {
+    background-image: url(../img/trend4.jpg);
+}
+.trend:first-child {
+   padding-left: 0;
+ }
+ .trend::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   background-color: #000000;
+   opacity: 0.6;
+   z-index: -1;
+ }
+.tegs {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 50%;
+    border: 3px solid #72643a;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 34px;
+ }
+.trend-caption a {
+    font-size: 20px;
+    line-height: 1.2;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: open-sans-bold;
+}
+.trend-caption a:hover {
+    color: #b59f5b;
 }
 .main-content {
   justify-content: space-between;
   padding: 59px 15px;
 }
 .main-content,
-.footer {
+.footer, .hand-mades {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -111,7 +279,7 @@ main {
 h2,
 h3,
 h4,
-.hashtag li,
+.hashtag,
 .tag,
 .button-subscribe {
   text-transform: uppercase;
@@ -144,9 +312,7 @@ h4,
   font-weight: 700;
   font-family: open-sans-bold;
 }
-.hashtag a:hover {
-  text-decoration: underline;
-}
+
 .caption {
   font-size: 20px;
   line-height: 1.25;
@@ -348,6 +514,7 @@ input:focus {
   margin-top: 11px;
   margin-bottom: 16px;
 }
+
 .sum {
   font-size: 12px;
   color: #b59f5b;
@@ -356,6 +523,96 @@ input:focus {
   position: absolute;
   bottom: 20px;
 }
+.hand-mades {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 15px 65px;
+ }
+ .mades-posts {
+     display: flex;
+     justify-content: space-between;
+ }
+ .made-first {
+     background-image: url(../img/shop-item-desk1.jpg);
+ }
+ .made-second {
+     background-image: url(../img/shop-item-desk2.jpg);
+ }
+ .made-third {
+     background-image: url(../img/shop-item-desk3.jpg);
+ }
+ .h-made {
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     margin-left: 25px;
+     width: 300px;
+     height: 200px;
+     margin-bottom: -30px;
+ }
+ .hm-text {
+     width: 350px;
+     height: 265px;
+     border: 3px solid #d3c59d;
+  }
+.hm-trend-caption {
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #0f0d0e;
+    font-weight: 700;
+    font-family: open-sans-bold;
+    margin-top: 56px;
+    margin-left: 20px;
+ }
+ .hm-content {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #0f0d0e;
+    font-weight: 400;
+    font-family: open-sans;
+    margin-left: 20px;
+ }
+ .hm-content a {
+    color: #b59f5b;
+    font-weight: 700;
+ }
+ .hm-content a:hover {
+     text-decoration: underline;
+  }
+.price-none {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #0f0d0e;
+    font-weight: 700;
+    font-family: open-sans-bold;
+}
+.price {
+    font-size: 20px;
+    color: #0f0d0e;
+    font-weight: 700;
+    font-family: open-sans-bold;
+ }
+ .shop-price {
+     margin-left: 20px;
+     margin-top: 30px;
+     justify-content: space-between;
+     align-items: baseline;
+ }
+ .price-product {
+ flex-direction: column;
+ }
+ .buy {
+     width: 150px;
+     height: 50px;
+     background-color: #b59f5b;
+     font-family: open-sans-bold;
+     font-size: 14px;
+     text-transform: uppercase;
+     color: #ffffff;
+     padding: 15px 30px;
+     margin-right: 30px;
+ }
 .footer {
   height: 83px;
   background-color: #f4f7f6;
