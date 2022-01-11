@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -25,57 +25,91 @@
         </div>
         <h1 class="intro">блог о творчестве, спорте, и образе жизни</h1>
     </header>
+    <div class="feedback">
+        <div class="popup">
+            <div class="popup-container">
+                <h3 class="new-caption">Ваш Фидбек</h3>
+                <div class="feedback-forms">
+                    <form class="form-feedback">
+                        <span class="question-feedback">Как часто вы заходите на сайт?</span>
+                        <select class="select-answer">
+                            <option selected="">Почти каждый день</option>
+                            <option>Раз в несколько дней</option>
+                            <option>Раз в несколько недель</option>
+                            <option>Несколько раз в год</option>
+                        </select>
+                    </form>
+                    <form class="form-feedback">
+                            <span class="question-feedback">Вы подписаны на e-mail рассылку?</span>
+                            <label class="radios">
+                                <input type="radio" class="radio" name="radios" checked="">
+                                <span class="radio-text">Да</span>
+                            </label>
+                            <label class="radios">
+                                <input type="radio" class="radio" name="radios">
+                                <span class="radio-text">Нет</span>
+                            </label>
+                        </form>
+                    <form class="form-feedback">
+                            <label class="question-feedback">Расскажите, какой контент Вы хотели бы видеть на нашем сайте?</label>
+                            <textarea class="text-form">Может, больше рецептов?</textarea>
+                        </form>
+                    <button class="send-button" type="button"><a href = "#0">Отправить</a></button>
+                    <div class="popup-close"><img src="svg/form-x.svg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <section class="trends">
         <h3 class="new-caption">сейчас в тренде</h3>
-        <article class="trend">
-            <img src="img/trend1.jpg" alt="сад на подоконнике">
-            <div class="trend-text">
-                <ul class="trend-hashtag">
-                    <li><a href="#0">lifestyle</a></li>
-                    <li><a href="#0">interior</a></li>
-                </ul>
-                <h2 class="trend-caption">
-                    <a href="#0">сейчас в тренде: сад на подоконнике</a>
-                </h2>
-        </article>
-        <article class="trend">
-            <img src="img/trend2.jpg" alt="сыр">
-            <div class="trend-text">
-                <ul class="trend-hashtag">
-                    <li><a href="#0">food</a></li>
-                </ul>
-                <h2 class="trend-caption">
-                    <a href="#0">сыры на красивых картинках из интернета: какие они на вкус?</a>
-                </h2>
-        </article>
-        <article class="trend">
-            <img src="img/trend3.jpg" alt="девушка на фоне гор">
-            <div class="trend-text">
-                <ul class="trend-hashtag">
-                    <li><a href="#0">lifestyle</a></li>
-                    <li><a href="#0">travel</a></li>
-                </ul>
-                <h2 class="trend-caption">
-                    <a href="#0">собираемся в первый поход в горы</a>
-                </h2>
-        </article>
-        <article class="trend">
-            <img src="img/trend4.jpg" alt="лимоны">
-            <div class="trend-text">
-                <ul class="trend-hashtag">
-                    <li><a href="#0">food</a></li>
-                    <li><a href="#0">health</a></li>
-                </ul>
-                <h2 class="trend-caption">
-                    <a href="#0">сейчас в тренде: сколько витамина с в лимонах?</a>
-                </h2>
-        </article>
+        <div class="articles-trend">
+            <article class="trend trend-first">
+                    <div class="tegs">
+                        <ul class="hashtag">
+                        <li><a href="#0">lifestyle</a></li>
+                        <li><a href="#0">interior</a></li>
+                         </ul>
+                        <h2 class="trend-caption">
+                        <a href="#0">сейчас в тренде: сад на подоконнике</a>
+                        </h2>
+                    </div>
+            </article>
+            <article class="trend trend-second">
+                <div class="tegs">
+                    <ul class="hashtag">
+                        <li><a href="#0">food</a></li>
+                    </ul>
+                    <h2 class="trend-caption">
+                        <a href="#0">сыры на красивых картинках из интернета: какие они на вкус?</a>
+                    </h2>
+                </div>
+            </article>
+            <article class="trend trend-third">
+                <div class="tegs">
+                    <ul class="hashtag">
+                        <li><a href="#0">lifestyle</a></li>
+                        <li><a href="#0">travel</a></li>
+                    </ul>
+                    <h2 class="trend-caption">
+                        <a href="#0">собираемся в первый поход в горы</a>
+                    </h2>
+                </div>
+            </article>
+            <article class="trend trend-fourth">
+                <div class="tegs">
+                    <ul class="hashtag">
+                        <li><a href="#0">food</a></li>
+                        <li><a href="#0">health</a></li>
+                    </ul>
+                    <h2 class="trend-caption">
+                        <a href="#0">сейчас в тренде: сколько витамина с в лимонах?</a>
+                    </h2>
+                </div>
+            </article>
+        </div>
     </section>
     <div class="main-content">
         <main>
-            <section class="trand">
-                <h3 class="new-caption">сейчас в тренде</h3>
-            </section>
             <div class="post-lists">
                 <article class="posts">
                     <img src="img/last-post1.jpg" alt="места, ради которых стоит проснуться">
@@ -266,47 +300,49 @@
     </div>
     <section class="hand-mades">
        <h3 class="new-caption">наши изделия</h3>
-        <article class="hand-made">
-            <img src="img/shop-item-desk1.jpg" alt="подушка с принтом">
-            <div class="hm-text">
-                <h2 class="trend-caption"></h2>
-                    <a href="#0">подушки на диван</a>
+        <div class="mades-posts">
+            <article class="hand-made">
+                <div class="h-made made-first"></div>
+                <div class="hm-text">
+                    <h5 class="hm-trend-caption">подушки на диван</h5>
                     <p class="hm-content">Набор из двух подушек с модными принтами. видео о создании <a href="#">здесь</a>.</p>
-                    <span class="price-none">1000₽</span>
-                    <span class="price">800₽</span>
-                    <form class="buy">
-                        <label class="button-buy">
-                        <button type="submit" class="button-to-shop">в магазин</button>
-                        </label>
-                    </form>
-        </article>
-        <article class="hand-made">
-            <img src="img/shop-item-desk2.jpg" alt="кукла-зайчик">
-            <div class="hm-text">
-                <h2 class="trend-caption"></h2>
-                <a href="#0">кукла "зайчик"</a>
-                <p class="hm-content">Интерьерная рукодельная кукла "Зайчик", созданию которой посвящена <a href="#">весенняя серия постов</a> в блоге и несколько подкастов.</p>
-                <span class="price">3500₽</span>
-                <form class="buy">
-                    <label class="button-buy">
-                        <button type="submit" class="button-to-shop">в магазин</button>
-                    </label>
-                </form>
-        </article>
-        <article class="hand-made">
-            <img src="img/shop-item-desk3.jpg" alt="шестиугольная рамка">
-            <div class="hm-text">
-                <h2 class="trend-caption"></h2>
-                <a href="#0">шестиугольная рамка</a>
-                <p class="hm-content">Необычная рамка для украшения дома из видео <a href="#">"Как сделать рамку из подручых средств за 30 минут"</a></p>
-                <span class="price-none">500₽</span>
-                <span class="price">400₽</span>
-                <form class="buy">
-                    <label class="button-buy">
-                        <button type="submit" class="button-to-shop">в магазин</button>
-                    </label>
-                </form>
-        </article>
+                    <div class="shop-price">
+                        <div class="price-product">
+                            <span class="price-none">1000₽</span>
+                            <span class="price">800₽</span>
+                        </div>
+                        <a class="buy">в магазин</a>
+                    </div>
+                </div>
+            </article>
+            <article class="hand-made">
+                <div class="h-made made-second"></div>
+                <div class="hm-text">
+                    <h5 class="hm-trend-caption">кукла "зайчик"</h5>
+                    <p class="hm-content">Интерьерная рукодельная кукла "Зайчик", созданию которой посвящена <a href="#">весенняя серия постов</a> в блоге и несколько подкастов.</p>
+                    <div class="shop-price">
+                        <div class="price-product">
+                            <span class="price">3500₽</span>
+                        </div>
+                        <a class="buy">в магазин</a>
+                    </div>
+                </div>
+            </article>
+            <article class="hand-made">
+                <div class="h-made made-third"></div>
+                <div class="hm-text">
+                    <h5 class="hm-trend-caption">шестиугольная рамка</h5>
+                    <p class="hm-content">Необычная рамка для украшения дома из видео <a href="#">"Как сделать рамку из подручных средств за 30 минут"</a></p>
+                    <div class="shop-price">
+                        <div class="price-product">
+                            <span class="price-none">500₽</span>
+                            <span class="price">400₽</span>
+                        </div>
+                        <a class="buy">в магазин</a>
+                    </div>
+                </div>
+            </article>
+        </div>
     </section>
     <footer class="footer">
                 <address class="articles-socials">
